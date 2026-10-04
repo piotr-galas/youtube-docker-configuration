@@ -1,0 +1,24 @@
+services:
+  node-hello:
+    container_name: node-hello
+    build:
+      context: ./node-hello
+    command: 'tail -f /dev/null'
+    volumes:
+      - ./node-hello:/app
+
+  ruby-hello:
+    container_name: ruby-hello
+    build:
+      context: ./ruby-hello
+    command: 'tail -f /dev/null'
+    volumes:
+      - ./ruby-hello:/app
+
+  go-hello:
+    container_name: go-hello
+    build:
+      context: ./go-hello
+    command: 'tail -f /dev/null'
+    volumes:
+      - ./go-hello:/app
